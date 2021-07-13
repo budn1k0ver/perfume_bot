@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:29.0-jre'
+
+    // telegram
+    implementation 'org.telegram:telegrambots:5.2.0'
+    implementation 'org.telegram:telegrambots-abilities:5.2.0'
+
+    // vdurmont
+    implementation 'com.vdurmont:emoji-java:5.1.1'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+	testCompileOnly 'org.projectlombok:lombok:1.18.20'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+    // log4j
+    implementation 'log4j:log4j:1.2.17'
+
+    // junit
+    testImplementation 'junit:junit:4.13'
+
+}
+
+application {
+    mainClassName = 'perfume.bot.Mind'
+}
